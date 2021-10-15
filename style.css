@@ -1,0 +1,13 @@
+body {
+  background-color: lightblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main section h1 {
+  color: red;
+}
+main section div {
+  margin-left: 1em;
+}
+main section h2 {
+  color: blue;
+}
