@@ -1,13 +1,29 @@
 body {
-  background-color: lightblue;
+  background-color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+main section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+  grid-gap: 1rem;
 }
 main section h1 {
   color: red;
+  margin-block-start: 0;
+  /* padding-bottom: 0; */
 }
 main section div {
-  margin-left: 1em;
+  margin-top: 0;
+  padding-top: 0;
 }
 main section h2 {
   color: blue;
+}
+p {
+  /* margin-top: 0; */
 }
