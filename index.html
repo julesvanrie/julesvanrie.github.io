@@ -2,50 +2,68 @@
 <html>
   <head>
     <title>Jules van Rie</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" title="main-ss"></link>
     <script src="scripts.js"></script>
   </head>
 <body>
   <header>
-    <h1 class="name">Jules van Rie</h1>
-    <p class="headline">Some engineer having fun designing websites</p>
-    <div><button onclick="changeColor()">Click me</button></div>
+    <div class="wrapper">
+      <h1 class="name">Jules van&nbsp;Rie</h1>
+      <p class="headline">Some engineer having fun designing websites</p>
+      <div><button onclick="changeColor()">Click me</button></div>
+    </div>
   </header>
   <main>
-    <section id="contact">
-      <h2>Contact details</h2>
-      <span>Here go my contact details</span>
-    </section>
-    <section id="experience">
-      <h2>Experience</h2>
-      <p>Here go my experiences</p>
-      <div class="experiences">
-          <div id="exp01">
-            <article>
-            <h3>Experience 01</h3>
-            <p>Description met veel meer tekst en zo, gewoon om het op te vullen.</p>
-            <img src="https://www.schoolplaten.com/afbeelding-eend-dm20017.jpg">
-            </article>
-          </div>
-          <div id="exp02">
-            <article>
-            <h3>Experience 02</h3>
-            <p>Description</p>
-            </article>
-          </div>
-          <div id="exp03">
-            <article>
-            <h3>Experience 03</h3>
-            <p>Description</p>
-            </article>
-          </div>
+    <div class="wrapper">
+      <section id="cv">
+        <div class="cv-element" id="contact-title">
+          <h2>Contact details</h2>
         </div>
-    </section>
-    <section id="education">
-      <h2>Education</h2>
-      <div>
-        <p>Here goes my education</p>
-        <ul class="educations">
+        <div class="cv-element" id="contact">
+          <section idd="contact">
+            Here go my contact details
+          </section>
+        </div>
+        <div class="cv-element" id="experience-title">
+          <h2 idd="experience-title">Experience</h2>
+        </div>
+        <div class="cv-element" id="experience">
+          <ul idd="experience">
+          <li>
+            <details>
+              <summary>
+                <h3 id="to-test">Experience 01</h3>
+                <div>En nog</div>
+              </summary>
+              Description met veel meer tekst en zo, gewoon om het op te vullen.
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <h3>Experience 02</h3>
+                <description>En nog text</description>
+              </summary>
+              Description
+            </details>
+          </li>
+          <li>
+            <details>
+              <summary>
+                <h3>Experience 03</h3>
+                En nog
+              </summary>
+              Description
+            </details>
+          </li>
+          </ul>
+        </div>
+        <div class="cv-element" id="education-title">
+          <h2>Education</h2>
+        </div>
+        <div class="cv-element" id="education">
+          <ul>
           <li id="edu1">
             <h3>Education 1</h3>
             <p>Description</p>
@@ -55,8 +73,14 @@
             <p>Description</p>
           </li>
         </ul>
-      </div>
+        </div>
+      </section>
+    </div>
   </main>
-  <footer>Hosted on github</footer>
+  <footer>
+    <div class="wrapper">
+      Hosted on github
+    </div>
+  </footer>
 </body>
 </html>
