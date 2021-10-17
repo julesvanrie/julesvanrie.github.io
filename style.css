@@ -148,3 +148,7 @@ summary > h3::after {
     margin: auto;
   }
 }
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
