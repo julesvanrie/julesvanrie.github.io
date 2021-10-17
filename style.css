@@ -31,22 +31,22 @@
   --standard-padding: 25px;
 }
 
+#education-title {
+  background-color: rgba(var(--prussian-blue),1);
+}
+#education {
+  background-color: rgba(var(--alice-blue),1);
+}
+#experience-title {
+  background-color: rgba(var(--teal-blue),1);
+}
+#experience {
+  background-color: rgba(var(--columbia-blue),1);
+}
 #contact-title {
   background-color: rgba(var(--blue-munsell),1);
 }
 #contact {
-  background-color: rgba(var(--columbia-blue),1);
-}
-#experience-title {
-  background-color: rgba(var(--prussian-blue),1);
-}
-#experience {
-  background-color: rgba(var(--alice-blue),1);
-}
-#education-title {
-  background-color: rgba(var(--teal-blue),1);
-}
-#education {
   background-color: rgba(var(--columbia-blue),1);
 }
 body {
@@ -65,7 +65,7 @@ h1 {
 h2 {
   color: var(--my-headings2-color);
   margin-top: 0;
-  brighten: 50%;
+  margin-bottom: 0;
   font-weight: 200;
   font-size: 2.5em;
   letter-spacing: -4px;
@@ -83,6 +83,8 @@ main > .wrapper {
 }
 details summary {
   cursor: pointer;
+  padding-left: 22px;
+  text-indent: -22px;
 }
 details summary > * {
   display: inline;
@@ -118,6 +120,14 @@ header > .wrapper {
   margin: 0;
   padding: 0;
 }
+summary {
+  font-weight: 600;
+  padding-bottom: 20px;
+}
+/* summary details {
+  padding-top: var(--standard-padding);
+  margin-top: 20px;
+} */
 summary > h3::after {
   content: "\a";
   white-space: pre;
