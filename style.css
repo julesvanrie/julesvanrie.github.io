@@ -49,18 +49,25 @@
 #contact {
   background-color: rgba(var(--columbia-blue),1);
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: var(--my-overflow-color);
   color: var(--my-text-color);
   font-family: Montserrat, sans-serif;
   padding: 0;
-  margin: 0;
+  margin: var(--standard-padding);
 }
 h1 {
   color: var(--my-headings1-color);
   font-size: 4em;
   font-weight: 600;
   letter-spacing: -4px;
+  margin-bottom: 0;
+}
+.headline {
+  margin-top: 0;
 }
 h2 {
   color: var(--my-headings2-color);
@@ -76,6 +83,13 @@ h3 {
   font-size: 1.6em;
   letter-spacing: -2px;
 }
+a {
+  color: var(--my-text-color);
+  text-decoration: none;
+}
+a:hover {
+  background-color: var(--my-almost-white);
+}
 main > .wrapper {
   background-color: var(--my-bg-color);
   /* padding-top: 20px;
@@ -89,18 +103,19 @@ details summary {
 details summary > * {
   display: inline;
 }
-header .wrapper {
-  background-color: var(--my-header-color);
-  padding: var(--standard-padding);
-}
-footer .wrapper {
-  background-color: var(--my-footer-color);
-  padding: var(--standard-padding);
-}
 header > .wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
   grid-gap: 1rem;
+  background-color: var(--my-header-color);
+  /* padding: var(--standard-padding); */
+  padding: 0;
+}
+footer > .wrapper {
+  background-color: var(--my-footer-color);
+  /* padding: var(--standard-padding); */
+  /* padding-top: var(--standard-padding); */
+  margin-top: var(--standard-padding);
 }
 #cv {
   display: grid;
