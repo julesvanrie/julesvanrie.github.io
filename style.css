@@ -4,24 +4,7 @@
   --standard-padding: 25px;
 }
 
-#experience-title {
-  background-color: var(--my-darkbg-1);
-}
-#experience {
-  background-color: var(--my-lightbg-1);
-}
-#education-title {
-  background-color: var(--my-darkbg-2);
-}
-#education {
-  background-color: var(--my-lightbg-2);
-}
-#contact-title {
-  background-color: var(--my-darkbg-3);
-}
-#contact {
-  background-color: var(--my-lightbg-1);
-}
+/* General body and text formatting */
 html {
   scroll-behavior: smooth;
 }
@@ -31,16 +14,6 @@ body {
   font-family: Montserrat, sans-serif;
   padding: 0;
   margin: var(--standard-padding);
-}
-h1 {
-  color: var(--my-headings1-color);
-  font-size: 4em;
-  font-weight: 600;
-  letter-spacing: -4px;
-  margin-bottom: 0;
-}
-.headline {
-  margin-top: 0;
 }
 h2 {
   color: var(--my-headings2-color);
@@ -63,10 +36,72 @@ a {
 a:hover {
   background-color: var(--my-almost-white);
 }
+
+/* Header formatting */
+header > .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+  grid-gap: 1rem;
+  background-color: var(--my-header-color);
+  /* padding: var(--standard-padding); */
+  padding: 0;
+}
+h1 {
+  color: var(--my-headings1-color);
+  font-size: 4em;
+  font-weight: 600;
+  letter-spacing: -4px;
+  margin-bottom: 0;
+}
+.headline {
+  margin-top: 0;
+}
+
+/* Main block formatting */
 main > .wrapper {
   background-color: var(--my-bg-color);
   /* padding-top: 20px;
   padding-bottom: 20px; */
+}
+
+/* CV blocks formatting */
+#cv {
+  display: grid;
+  /* grid-template-columns: minmax(150px,1fr) 3fr; */
+  grid-auto-flow: row;
+  grid-gap: 0;
+}
+#cv > section {
+  padding: var(--standard-padding);
+}
+#experience-title {
+  background-color: var(--my-darkbg-1);
+}
+#experience {
+  background-color: var(--my-lightbg-1);
+}
+#education-title {
+  background-color: var(--my-darkbg-2);
+}
+#education {
+  background-color: var(--my-lightbg-2);
+}
+#contact-title {
+  background-color: var(--my-darkbg-3);
+}
+#contact {
+  background-color: var(--my-lightbg-1);
+}
+
+/* CV elements formatting */
+#cv > section > ul {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); */
+  grid-gap: 2rem;
+  grid-auto-flow: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 details summary {
   cursor: pointer;
@@ -76,62 +111,24 @@ details summary {
 details summary > * {
   display: inline;
 }
-header > .wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
-  grid-gap: 1rem;
-  background-color: var(--my-header-color);
-  /* padding: var(--standard-padding); */
-  padding: 0;
+summary {
+  font-weight: 600;
+  padding-bottom: 20px;
 }
+summary > h3::after {
+  content: "\a";
+  white-space: pre;
+}
+
+/* Footer formatting */
 footer > .wrapper {
   background-color: var(--my-footer-color);
   /* padding: var(--standard-padding); */
   /* padding-top: var(--standard-padding); */
   margin-top: var(--standard-padding);
 }
-#cv {
-  display: grid;
-  /* grid-template-columns: minmax(150px,1fr) 3fr; */
-  grid-auto-flow: row;
-  grid-gap: 0;
-}
-.cv-element {
-  padding: var(--standard-padding);
-}
-.cv-element > ul {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); */
-  grid-gap: 2rem;
-  grid-auto-flow: row;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-summary {
-  font-weight: 600;
-  padding-bottom: 20px;
-}
-/* summary details {
-  padding-top: var(--standard-padding);
-  margin-top: 20px;
-} */
-summary > h3::after {
-  content: "\a";
-  white-space: pre;
-}
-#to-test::after {
-  content: "\a";
-  white-space: pre;
-}
 
-.experiences > div {
-  /* width: 100%; */
-}
-.experiences > img {
-  /* width: 100%; */
-}
-
+/* Some responsive design tweaks */
 @media (min-width: 576px) {
   #cv {
     grid-template-columns: 1fr 4fr;
