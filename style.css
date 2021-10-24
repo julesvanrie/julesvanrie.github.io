@@ -13,7 +13,11 @@ body {
   color: var(--my-text-color);
   font-family: Montserrat, sans-serif;
   padding: 0;
-  margin: var(--standard-padding);
+  margin: 0;
+}
+.wrapper {
+  padding: var(--standard-padding);
+  box-sizing: border-box;
 }
 h2 {
   color: var(--my-headings2-color);
@@ -43,8 +47,6 @@ header > .wrapper {
   grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
   grid-gap: 1rem;
   background-color: var(--my-header-color);
-  /* padding: var(--standard-padding); */
-  padding: 0;
 }
 h1 {
   color: var(--my-headings1-color);
@@ -60,8 +62,7 @@ h1 {
 /* Main block formatting */
 main > .wrapper {
   background-color: var(--my-bg-color);
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
+  padding: 0;
 }
 
 /* CV blocks formatting */
@@ -123,17 +124,82 @@ summary > h3::after {
 /* Footer formatting */
 footer > .wrapper {
   background-color: var(--my-footer-color);
-  /* padding: var(--standard-padding); */
-  /* padding-top: var(--standard-padding); */
-  margin-top: var(--standard-padding);
 }
+
+/* Navigation formatting */
+nav {
+  background-color: var(--my-almost-black);
+  color: var(--my-almost-white);
+}
+nav .wrapper {
+  display: grid;
+  padding: 5px;
+  grid-template-columns: 1fr auto;
+}
+nav a {
+  color: var(--my-almost-white);
+}
+nav #menu-button {
+  wwidth: 20px;
+  wheight: 20px;
+  rright: 0;
+}
+nav .bar1, .bar2, .bar3 {
+  width: 20px;
+  height: 2px;
+  background-color: var(--my-almost-white);
+  margin: 4px 0;
+  transition: 0.4s;
+}
+/* Rotate first bar */
+nav .change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-0px, 0px) ;
+  transform: rotate(-45deg) translate(-4px, 4px) ;
+}
+/* Fade out the second bar */
+nav .change .bar2 {
+  opacity: 0;
+}
+/* Rotate last bar */
+nav .change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-0px, -0px) ;
+  transform: rotate(45deg) translate(-4px, -5px) ;
+}
+
+nav #menu {
+  position: absolute;
+  top: 30px;
+  right: 0px;
+  margin: 0;
+  display: none;
+  background-color: var(--my-almost-black);
+  padding: 0;
+  border-bottom: 2px solid var(--my-bg-color);
+}
+nav #menu li {
+  text-align: right;
+  border-top: 1px solid var(--my-almost-white);
+}
+nav #menu li:last-child {
+
+}
+nav #menu li a {
+  display: block;
+  width: 100vw;
+  padding: 5px;
+}
+nav #menu li a:hover {
+  background-color: var(--my-lighter-black);
+}
+
+
 
 /* Some responsive design tweaks */
 @media (min-width: 576px) {
   #cv {
     grid-template-columns: 1fr 4fr;
   }
-  .cv-element > ul {
+  #cv > section > ul {
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   }
 }

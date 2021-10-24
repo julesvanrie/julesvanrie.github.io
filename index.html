@@ -6,13 +6,25 @@
     <meta charset="UTF-8">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900' rel='stylesheet'>
     <link rel="stylesheet" href="style.css" title="main-ss"></link>
-    <script src="scripts.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
   </head>
 <body>
   <nav>
-    &gt;&nbsp;<a href="#experience-title">Experience</a>
-    &gt;&nbsp;<a href="#education-title">Education</a>
-    &gt;&nbsp;<a href="#contact-title">Contact</a>
+    <div class="wrapper">
+      <div>Jules van Rie</div>
+      <div>
+        <div id="menu-button" onclick="animateMenuButton(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <ul id="menu">
+          <li><a href="#experience-title">Experience</a></li>
+          <li><a href="#education-title">Education</a></li>
+          <li><a href="#contact-title">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
   <header>
     <div class="wrapper">
