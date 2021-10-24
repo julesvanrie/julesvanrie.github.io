@@ -1,0 +1,38 @@
+:root {
+  /* --cadet: #4f6d7aff;
+  --columbia-blue: #c0d6dfff;
+  --alice-blue: #dbe9eeff;
+  --blue-yonder: #4a6fa5ff;
+  --blue-sapphire: #166088ff; */
+
+  --cadet: 79, 109, 122;
+  --columbia-blue: 192, 214, 223;
+  --alice-blue: 219, 233, 238;
+  --blue-yonder: 74, 111, 165;
+  --blue-sapphire: 22, 96, 136;
+
+  --gunmetal: 39, 54, 60;
+  --teal-blue: 69, 118, 137;
+  --blue-munsell: 73, 134, 156;
+  --prussian-blue: 37, 55, 83;
+  --prussian-blue-2: 11, 48, 68;
+
+  --my-darkbg-1: rgba(var(--teal-blue),1);
+  --my-darkbg-2: rgba(var(--prussian-blue),1);
+  --my-darkbg-3: rgba(var(--blue-munsell),1);
+
+  --my-lightbg-1: rgba(var(--columbia-blue),1);
+  --my-lightbg-2: rgba(var(--alice-blue),1);
+
+
+  --my-almost-black: #333333;
+  --my-lighter-black: #444444;
+  --my-almost-white: rgba(240,240,240,1);
+  --my-bg-color: rgba(var(--alice-blue),1);
+  --my-text-color: rgba(var(--prussian-blue-2),1);
+  --my-overflow-color: rgba(var(--alice-blue),1);
+  --my-headings1-color: var(--cadet);
+  --my-headings2-color: var(--my-almost-white);
+  --my-header-color: var(--isabelline);
+  --my-footer-color: var(--isabelline);
+}
